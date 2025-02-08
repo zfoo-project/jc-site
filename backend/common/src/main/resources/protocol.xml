@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!-- native为内部消息，common是公共消息每个模块都能使用 -->
+<protocols>
+    <module id="1" name="native">
+        <protocol location="com.zfoo.net.router.attachment.SignalAttachment"/>
+        <protocol location="com.zfoo.net.router.attachment.GatewayAttachment"/>
+        <protocol location="com.zfoo.net.router.attachment.UdpAttachment"/>
+        <protocol location="com.zfoo.net.router.attachment.HttpAttachment"/>
+        <protocol location="com.zfoo.net.router.attachment.NoAnswerAttachment"/>
+    </module>
+
+    <module id="2" name="common">
+        <protocol location="com.zfoo.net.packet.common.Message"/>
+        <protocol location="com.zfoo.net.packet.common.Error"/>
+        <protocol location="com.zfoo.net.packet.common.Heartbeat"/>
+        <protocol location="com.zfoo.net.packet.common.Ping"/>
+        <protocol location="com.zfoo.net.packet.common.Pong"/>
+
+        <protocol location="com.zfoo.net.packet.common.PairIntLong"/>
+        <protocol location="com.zfoo.net.packet.common.PairLong"/>
+        <protocol location="com.zfoo.net.packet.common.PairString"/>
+        <protocol location="com.zfoo.net.packet.common.PairLS"/>
+        <protocol location="com.zfoo.net.packet.common.TripleLong"/>
+        <protocol location="com.zfoo.net.packet.common.TripleString"/>
+        <protocol location="com.zfoo.net.packet.common.TripleLSS"/>
+    </module>
+
+    <module id="4" name="jiucai">
+        <protocol id="200" location="fun.jiucai.common.protocol.news.News"/>
+        <protocol id="201" location="fun.jiucai.common.protocol.news.NewsStock"/>
+        <protocol id="202" location="fun.jiucai.common.protocol.news.NewsConcept"/>
+        <protocol id="203" location="fun.jiucai.common.protocol.news.NewsRequest"/>
+        <protocol id="204" location="fun.jiucai.common.protocol.news.NewsResponse"/>
+        <protocol id="205" location="fun.jiucai.common.protocol.news.NewsOneRequest"/>
+        <protocol id="206" location="fun.jiucai.common.protocol.news.NewsOneResponse"/>
+        <protocol id="207" location="fun.jiucai.common.protocol.news.NewsLoadMoreRequest"/>
+        <protocol id="208" location="fun.jiucai.common.protocol.news.NewsLoadMoreResponse"/>
+        <protocol id="209" location="fun.jiucai.common.protocol.news.NewsSearchRequest"/>
+        <protocol id="210" location="fun.jiucai.common.protocol.news.NewsSearchResponse"/>
+
+        <protocol id="300" location="fun.jiucai.common.protocol.stock.Market"/>
+        <protocol id="301" location="fun.jiucai.common.protocol.stock.SaveMarketAsk"/>
+        <protocol id="302" location="fun.jiucai.common.protocol.stock.SaveMarketAnswer"/>
+        <protocol id="303" location="fun.jiucai.common.protocol.stock.MarketRequest"/>
+        <protocol id="304" location="fun.jiucai.common.protocol.stock.MarketResponse"/>
+
+        <protocol id="350" location="fun.jiucai.common.protocol.concept.Concept"/>
+        <protocol id="351" location="fun.jiucai.common.protocol.concept.ConceptRequest"/>
+        <protocol id="352" location="fun.jiucai.common.protocol.concept.ConceptResponse"/>
+
+        <protocol id="400" location="fun.jiucai.common.protocol.rank.EastMoneyRank"/>
+        <protocol id="401" location="fun.jiucai.common.protocol.rank.ThsRank"/>
+        <protocol id="402" location="fun.jiucai.common.protocol.rank.RankRequest"/>
+        <protocol id="403" location="fun.jiucai.common.protocol.rank.RankResponse"/>
+
+        <protocol id="500" location="fun.jiucai.common.protocol.chatgpt.ChatgptMessageRequest"/>
+        <protocol id="501" location="fun.jiucai.common.protocol.chatgpt.ChatgptMessageNotice"/>
+        <protocol id="502" location="fun.jiucai.common.protocol.chatgpt.ChatgptForceStopRequest"/>
+        <protocol id="503" location="fun.jiucai.common.protocol.chatgpt.ChatgptForceStopResponse"/>
+        <protocol id="504" location="fun.jiucai.common.protocol.chatgpt.ChatgptMessage"/>
+        <protocol id="510" location="fun.jiucai.common.protocol.chatgpt.TransferChatgptAsk"/>
+        <protocol id="511" location="fun.jiucai.common.protocol.chatgpt.TransferChatgptNotify"/>
+
+        <protocol id="600" location="fun.jiucai.common.protocol.chat.ChatMessage"/>
+        <protocol id="601" location="fun.jiucai.common.protocol.chat.GroupChatNotice"/>
+        <protocol id="602" location="fun.jiucai.common.protocol.chat.GroupChatRequest"/>
+        <protocol id="603" location="fun.jiucai.common.protocol.chat.GroupHistoryMessageRequest"/>
+        <protocol id="604" location="fun.jiucai.common.protocol.chat.GroupHistoryMessageResponse"/>
+
+        <protocol id="700" location="fun.jiucai.common.protocol.auth.LoginRequest"/>
+        <protocol id="701" location="fun.jiucai.common.protocol.auth.LoginResponse"/>
+        <protocol id="702" location="fun.jiucai.common.protocol.auth.OssPolicyRequest"/>
+        <protocol id="703" location="fun.jiucai.common.protocol.auth.OssPolicyResponse"/>
+        <protocol id="704" location="fun.jiucai.common.protocol.auth.OssPolicyVO"/>
+        <protocol id="705" location="fun.jiucai.common.protocol.auth.LoginByWeChatRequest"/>
+        <protocol id="706" location="fun.jiucai.common.protocol.auth.LoginByWeChatResponse"/>
+
+        <protocol id="750" location="fun.jiucai.common.protocol.user.User"/>
+        <protocol id="751" location="fun.jiucai.common.protocol.user.UserProfileNotice"/>
+        <protocol id="752" location="fun.jiucai.common.protocol.user.UpdateUserProfileRequest"/>
+        <protocol id="753" location="fun.jiucai.common.protocol.user.UpdateUserProfileResponse"/>
+        <protocol id="754" location="fun.jiucai.common.protocol.user.GetUserProfileRequest"/>
+        <protocol id="755" location="fun.jiucai.common.protocol.user.GetUserProfileResponse"/>
+
+        <protocol id="800" location="fun.jiucai.common.protocol.midjourney.MidImagineRequest"/>
+        <protocol id="801" location="fun.jiucai.common.protocol.midjourney.MidHistoryRequest"/>
+        <protocol id="802" location="fun.jiucai.common.protocol.midjourney.MidImagineNotice"/>
+        <protocol id="803" location="fun.jiucai.common.protocol.midjourney.MidRerollRequest"/>
+        <protocol id="804" location="fun.jiucai.common.protocol.midjourney.MidSelectRequest"/>
+        <protocol id="805" location="fun.jiucai.common.protocol.midjourney.MidUpscaleRequest"/>
+        <protocol id="806" location="fun.jiucai.common.protocol.midjourney.MidZoomRequest"/>
+        <protocol id="807" location="fun.jiucai.common.protocol.midjourney.MidInpaintRequest"/>
+        <protocol id="820" location="fun.jiucai.common.protocol.midjourney.TransferMidImagineAsk"/>
+        <protocol id="821" location="fun.jiucai.common.protocol.midjourney.TransferMidImagineNotify"/>
+        <protocol id="823" location="fun.jiucai.common.protocol.midjourney.TransferMidRerollAsk"/>
+        <protocol id="824" location="fun.jiucai.common.protocol.midjourney.TransferMidSelectAsk"/>
+        <protocol id="825" location="fun.jiucai.common.protocol.midjourney.TransferMidUpscaleAsk"/>
+        <protocol id="826" location="fun.jiucai.common.protocol.midjourney.TransferMidZoomAsk"/>
+        <protocol id="827" location="fun.jiucai.common.protocol.midjourney.TransferMidInpaintAsk"/>
+
+        <protocol id="850" location="fun.jiucai.common.protocol.broker.BrokerRegisterAsk"/>
+        <protocol id="851" location="fun.jiucai.common.protocol.broker.BrokerRegisterAnswer"/>
+        <protocol id="860" location="fun.jiucai.common.protocol.broker.SeoAsk"/>
+
+        <protocol id="1000" location="fun.jiucai.common.protocol.sdiffusion.StableDiffusionRequest"/>
+        <protocol id="1001" location="fun.jiucai.common.protocol.sdiffusion.StableDiffusionResponse"/>
+        <protocol id="1002" location="fun.jiucai.common.protocol.sdiffusion.StableDiffusionParameters"/>
+        <protocol id="1003" location="fun.jiucai.common.protocol.sdiffusion.InterrogatorPromptRequest"/>
+        <protocol id="1004" location="fun.jiucai.common.protocol.sdiffusion.InterrogatorPromptResponse"/>
+        <protocol id="1050" location="fun.jiucai.common.protocol.sdiffusion.SdSimulateRequest"/>
+        <protocol id="1051" location="fun.jiucai.common.protocol.sdiffusion.SdSimulateNotice"/>
+        <protocol id="1052" location="fun.jiucai.common.protocol.sdiffusion.SdHistoryRequest"/>
+        <protocol id="1053" location="fun.jiucai.common.protocol.sdiffusion.SdSimulateResponse"/>
+        <protocol id="1054" location="fun.jiucai.common.protocol.sdiffusion.SdImage"/>
+        <protocol id="1055" location="fun.jiucai.common.protocol.sdiffusion.ImageDownloadRequest"/>
+        <protocol id="1056" location="fun.jiucai.common.protocol.sdiffusion.ImageDownloadResponse"/>
+        <protocol id="1057" location="fun.jiucai.common.protocol.sdiffusion.ImageDeleteAsk"/>
+        <protocol id="1070" location="fun.jiucai.common.protocol.sdiffusion.SdSimulateAsk"/>
+        <protocol id="1071" location="fun.jiucai.common.protocol.sdiffusion.SdSimulateAnswer"/>
+        <protocol id="1072" location="fun.jiucai.common.protocol.sdiffusion.TransferSdSimulateNotify"/>
+
+        <protocol id="1200" location="fun.jiucai.common.protocol.animation.AnimationImage"/>
+        <protocol id="1211" location="fun.jiucai.common.protocol.animation.AnimationRequest"/>
+        <protocol id="1212" location="fun.jiucai.common.protocol.animation.AnimationNotice"/>
+        <protocol id="1213" location="fun.jiucai.common.protocol.animation.TransferAnimationAsk"/>
+        <protocol id="1214" location="fun.jiucai.common.protocol.animation.TransferAnimationNotify"/>
+
+        <protocol id="10000" location="fun.jiucai.common.protocol.admin.AdminInfoRequest"/>
+        <protocol id="10001" location="fun.jiucai.common.protocol.admin.AdminInfoResponse"/>
+        <protocol id="10002" location="fun.jiucai.common.protocol.admin.Broadcast"/>
+        <protocol id="10003" location="fun.jiucai.common.protocol.admin.DoBroadcastRequest"/>
+        <protocol id="10004" location="fun.jiucai.common.protocol.admin.DoBroadcastResponse"/>
+        <protocol id="10010" location="fun.jiucai.common.protocol.admin.DeleteBroadcastRequest"/>
+        <protocol id="10011" location="fun.jiucai.common.protocol.admin.DeleteBroadcastResponse"/>
+        <protocol id="10050" location="fun.jiucai.common.protocol.admin.Statistics"/>
+        <protocol id="10051" location="fun.jiucai.common.protocol.admin.NewsStat"/>
+        <protocol id="10060" location="fun.jiucai.common.protocol.admin.StatisticsRequest"/>
+    </module>
+</protocols>

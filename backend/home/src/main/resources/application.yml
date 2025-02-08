@@ -1,0 +1,92 @@
+myspring:
+  profiles:
+    active: dev
+
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%clr(%5level)] [%thread] %clr(%logger{20}.%M){cyan}\(%F:%line\) - %msg%n'
+
+myconfiguration:
+  xunfei:
+    - appId: your-id
+      apiKey: your-key
+      apiSecret: your-secret
+    - appId: your-id-2
+      apiKey: your-key-2
+      apiSecret: your-secret-2
+  baidu:
+    - accessKey: your-key
+      secretKey: your-secret
+    - accessKey: your-key-2
+      secretKey: your-secret-2
+  tencent:
+    - secretId: your-id
+      secretKey: your-key
+    - secretId: your-id-2
+      secretKey: your-key-2
+  google:
+    - apiKey: your-key
+    - apiKey: your-key-2
+  silicon:
+    - token: your-token
+    - token: your-token-2
+  deepseek:
+    - token: your-token
+    - token: your-token-2
+  openai:
+    - token: your-token
+    - token: your-token-2
+  midjourney:
+    guildId: your-guildId
+    channelId: your-channelId
+    botToken: your-botToken
+    sessionId: your-sessionId
+    userToken: your-userToken
+  aliyun:
+    accessKeyId: your-key
+    accessKeySecret: your-secret
+    endpoint: your-oss-endpoint
+    bucketName: your-bucketName
+
+
+jiucai:
+  broker:
+    host: 127.0.0.1
+    port: 19002
+  chatgpt:
+    token: your-chatgpt-token
+  seo:
+    baidu: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  translate:
+    appid: your-id
+    securityKey: your-secret
+
+orm:
+  id: mongodbConfig
+  entity-package: fun.jiucai.**.entity
+  host:
+    database: jiucai
+    user:
+    password:
+    address:
+      - 127.0.0.1:27017
+  caches:
+    - strategy: default
+      size: 6000
+      expire-millisecond: 600000
+    - strategy: tenThousand
+      size: 10000
+      expire-millisecond: 600000
+  persisters:
+    - strategy: default
+      type: time
+      config: 60000
+    - strategy: cron30s
+      type: cron
+      config: 0/30 * * * * ?
+
+net:
+  id: netConfig
+  protocol-location: protocol.xml
+  code-languages: 0
+  fold-protocol: true

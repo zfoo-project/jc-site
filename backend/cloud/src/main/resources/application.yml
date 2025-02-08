@@ -1,0 +1,74 @@
+myspring:
+  profiles:
+    active: dev
+
+logging:
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%clr(%5level)] [%thread] %clr(%logger{20}.%M){cyan}\(%F:%line\) - %msg%n'
+
+# 根路径配置
+server:
+  address: 0.0.0.0
+  port: 80
+  servlet:
+    context-path: /
+
+jiucai:
+  cloud:
+    host: 0.0.0.0
+    port: 19001
+  broker:
+    host: 0.0.0.0
+    port: 19002
+  chatgpt:
+    mytokens:
+      - url: https://api.chatanywhere.org
+        token: your-token
+  spider:
+    path: ../spider/spider.js
+  weixing:
+    securityKey: your-key
+    appId: your-id
+    mchId: 100
+    mchSerialNo: your-serial
+    serviceSecurityKey: your-secret
+  aliyun:
+    accessKeyId: your-key
+    accessKeySecret: your-secret
+
+storage:
+  id: storageManager
+  scan:
+    package: fun.jiucai.**.resource
+  resource:
+    location: classpath:/excel
+
+orm:
+  id: mongodbConfig
+  entity-package: fun.jiucai.**.entity
+  host:
+    database: jiucai
+    user:
+    password:
+    address:
+      - 127.0.0.1:27017
+  caches:
+    - strategy: default
+      size: 6000
+      expire-millisecond: 600000
+    - strategy: tenThousand
+      size: 10000
+      expire-millisecond: 600000
+  persisters:
+    - strategy: default
+      type: time
+      config: 60000
+    - strategy: cron30s
+      type: cron
+      config: 0/30 * * * * ?
+
+net:
+  id: netConfig
+  protocol-location: protocol.xml
+  code-languages: 0
+  fold-protocol: true
