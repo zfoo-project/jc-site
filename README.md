@@ -2,11 +2,7 @@
 
 ## 韭菜网3.4.3版本的开源项目，zfoo在web网页上的用法，主要功能如下
 
-- websocket通信
-    - 匿名文字聊天
-    - 图片分享
-
-- chatgpt
+- AI机器人聊天
     - 讯飞星火大模型
     - 文心一言
     - 腾讯混元
@@ -14,9 +10,15 @@
     - meta llama
     - deep seek
     - google gemini
+    - chatgpt
     - bing 联网搜索
     - google 联网搜索
     - b站联网搜索
+
+
+- 匿名聊天
+  - 文字聊天
+  - 图片分享
 
 - Midjoruney 文生图
 - Midjoruney 图生图
@@ -33,7 +35,7 @@
 
 ## 本地启动
 
-- backend 后端，[强依赖zfoo框架](https://github.com/zfoo-project/zfoo)
+- backend 后端，[依赖zfoo框架](https://github.com/zfoo-project/zfoo)
     - cloud 入口，主要核心业务服务器，有很多其它的第三方api依赖需要自己申请token权限
     - home 主要放在家里的服务器，处理一些次要业务
 
